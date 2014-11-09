@@ -73,7 +73,8 @@
         android:id="@+id/editText2"
         android:layout_alignTop="@+id/newWagerNotesTextView"
         android:layout_alignStart="@+id/editText"
-        android:minLines="4" />
+        android:gravity="top|left"
+        android:minLines="3" />
 
     <Button
         android:layout_width="wrap_content"

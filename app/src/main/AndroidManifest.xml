@@ -53,12 +53,12 @@
                 android:value="com.shamiq.microbitwager.WagersMain" />
         </activity>
         <activity
-            android:name=".PendingWagers"
-            android:label="@string/title_activity_pending_validations"
-            android:parentActivityName="com.shamiq.microbitwager.WagersMain" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.shamiq.microbitwager.WagersMain" />
+            android:name="com.shamiq.microbitwager.ListViewWithListActivity"
+            android:label="@string/title_activity_list_view" >
+        </activity>
+        <activity
+            android:name="com.shamiq.microbitwager.ListViewWithListActivityFixed"
+            android:label="@string/title_activity_list_view_with_list_activity_fixed" >
         </activity>
     </application>
 

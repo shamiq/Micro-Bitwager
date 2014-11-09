@@ -1,6 +1,7 @@
 package com.shamiq.microbitwager;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,9 +44,14 @@ public class NewWager extends Activity {
     }
 
     public void confirm(View view){
-        //TODO get data from text views
 
-        //TODO add to an array adaptor since we're a hack
+        SharedPreferences settings = getSharedPreferences("DEFAULT", 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString("balance", "5" );
+        editor.commit();
+
+        finish();
+
 
         //
     }

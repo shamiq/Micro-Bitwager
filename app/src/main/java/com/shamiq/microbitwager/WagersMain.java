@@ -24,6 +24,15 @@ public class WagersMain extends Activity {
     }
 
 
+    protected void onActivityResult(int requestCode, int resultCode,
+                                    Intent data) {
+        SharedPreferences settings = getSharedPreferences("DEFAULT", 0);
+        String string = settings.getString("balance", "5");
+        TextView balance = (TextView)findViewById(R.id.balanceWagersTextView);
+        balance.setText("Current balance: " + string + " BTC");
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -52,7 +61,7 @@ public class WagersMain extends Activity {
     }
 
     public void pendingWagers(View view){
-        Intent intent = new Intent(this, PendingWagers.class);
-        startActivity(intent);
+        Intent intent = new Intent(this, ListViewWithListActivityFixed.class);
+        startActivityForResult(intent, 0);
     }
 }
