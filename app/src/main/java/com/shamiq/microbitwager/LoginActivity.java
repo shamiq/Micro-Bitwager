@@ -1,6 +1,7 @@
 package com.shamiq.microbitwager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -39,9 +40,10 @@ public class LoginActivity extends Activity {
     }
 
     public void submit(View view){
-        //TODO
-        //1. check there's data entered in fields
-        //2. Start the wagers activity
+        //TODO validation
+        //
+        Intent intent = new Intent(this, WagersMain.class);
+        startActivity(intent);
     }
 }
 

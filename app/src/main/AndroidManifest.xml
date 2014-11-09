@@ -40,6 +40,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.shamiq.microbitwager.UserCreate" />
         </activity>
+        <activity
+            android:name="com.shamiq.microbitwager.WagersMain"
+            android:label="@string/title_activity_wagers_main" >
+        </activity>
+        <activity
+            android:name="com.shamiq.microbitwager.NewWager"
+            android:label="@string/title_activity_new_wager"
+            android:parentActivityName="com.shamiq.microbitwager.WagersMain" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shamiq.microbitwager.WagersMain" />
+        </activity>
+        <activity
+            android:name=".PendingWagers"
+            android:label="@string/title_activity_pending_validations"
+            android:parentActivityName="com.shamiq.microbitwager.WagersMain" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shamiq.microbitwager.WagersMain" />
+        </activity>
     </application>
 
 </manifest>

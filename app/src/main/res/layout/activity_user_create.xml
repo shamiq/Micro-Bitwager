@@ -4,7 +4,27 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.shamiq.microbitwager.UserCreate">
+    tools:context="com.shamiq.microbitwager.UserCreate"
+   >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:id="@+id/createNameTextView"
+        android:layout_above="@+id/createEmailTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="34dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:ems="10"
+        android:id="@+id/createNameEditText"
+        android:layout_alignBottom="@+id/createNameTextView"
+        android:layout_alignStart="@+id/fundEditAccount" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,7 +57,7 @@
         android:layout_height="wrap_content"
         android:inputType="numberPassword"
         android:ems="10"
-        android:id="@+id/fundEditRouting"
+        android:id="@+id/createPinEditText"
         android:layout_alignBottom="@+id/CreatePinTextView"
         android:layout_alignStart="@+id/fundEditAccount"
         android:hint="****" />
@@ -48,27 +68,9 @@
         android:id="@+id/next"
         android:layout_marginTop="42dp"
         android:onClick="next"
-        android:layout_below="@+id/fundEditRouting"
+        android:layout_below="@+id/createPinEditText"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name"
-        android:id="@+id/createNameTextView"
-        android:layout_above="@+id/createEmailTextView"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="34dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Name"
-        android:ems="10"
-        android:id="@+id/createNameEditText"
-        android:layout_alignBottom="@+id/createNameTextView"
-        android:layout_alignStart="@+id/fundEditAccount" />
 
     <TextView
         android:layout_width="wrap_content"

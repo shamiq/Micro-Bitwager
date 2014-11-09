@@ -1,10 +1,13 @@
 package com.shamiq.microbitwager;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 
 public class FundAccount extends Activity {
@@ -39,6 +42,21 @@ public class FundAccount extends Activity {
     }
 
     public void submit(View view){
-        //TODO
+
+        EditText value;
+        value = (EditText)findViewById(R.id.amountEditText);
+        SharedPreferences settings = getSharedPreferences("DEFAULT", 0);
+        SharedPreferences.Editor editor = settings.edit();
+
+
+        // add items to file
+        editor.putString("balance", value.getText().toString() );
+
+
+        // commit editor
+        editor.commit();
+
+        Intent intent = new Intent(this, WagersMain.class);
+        startActivity(intent);
     }
 }

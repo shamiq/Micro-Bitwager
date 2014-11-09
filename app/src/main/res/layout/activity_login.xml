@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
+        android:hint="sample@email.com"
         android:id="@+id/fundEditAccount"
         android:layout_marginTop="127dp"
         android:layout_alignParentTop="true"
@@ -37,6 +38,7 @@
         android:inputType="numberPassword"
         android:ems="10"
         android:id="@+id/fundEditRouting"
+        android:hint="****"
         android:layout_alignBottom="@+id/CreatePinTextView"
         android:layout_alignStart="@+id/fundEditAccount" />
     <Button

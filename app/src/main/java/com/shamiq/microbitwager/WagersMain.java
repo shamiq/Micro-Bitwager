@@ -7,21 +7,27 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.TextView;
 
-public class UserCreate extends Activity {
+
+public class WagersMain extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_create);
+        setContentView(R.layout.activity_wagers_main);
+
+        SharedPreferences settings = getSharedPreferences("DEFAULT", 0);
+        String string = settings.getString("balance", "");
+        TextView balance = (TextView)findViewById(R.id.balanceWagersTextView);
+        balance.setText("Current balance: " + string + " BTC");
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_user_create, menu);
+        getMenuInflater().inflate(R.menu.menu_wagers_main, menu);
         return true;
     }
 
@@ -40,31 +46,13 @@ public class UserCreate extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void next(View view){
-        EditText email;
-        EditText pin;
-
-        email = (EditText)findViewById(R.id.createNameEditText);
-        pin = (EditText)findViewById(R.id.createPinEditText);
-        // Add validation at some point.
-
-        // open preferences file
-        SharedPreferences settings = getSharedPreferences("DEFAULT", 0);
-        SharedPreferences.Editor editor = settings.edit();
-
-
-        // add items to file
-        editor.putString("email", email.getText().toString() );
-        editor.putString("PIN", pin.getText().toString());
-
-
-        // commit editor
-        editor.commit();
-
-
-        //Start the Fund your Account activity.
-        Intent intent = new Intent(this, FundAccount.class);
+    public void makeWager(View view){
+        Intent intent = new Intent(this, NewWager.class);
         startActivity(intent);
+    }
 
+    public void pendingWagers(View view){
+        Intent intent = new Intent(this, PendingWagers.class);
+        startActivity(intent);
     }
 }
