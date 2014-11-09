@@ -16,6 +16,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.shamiq.microbitwager.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName="com.shamiq.microbitwager.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shamiq.microbitwager.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.shamiq.microbitwager.UserCreate"
+            android:label="@string/title_activity_user_create"
+            android:parentActivityName="com.shamiq.microbitwager.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shamiq.microbitwager.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.shamiq.microbitwager.FundAccount"
+            android:label="@string/title_activity_fund_account"
+            android:parentActivityName="com.shamiq.microbitwager.UserCreate" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shamiq.microbitwager.UserCreate" />
+        </activity>
     </application>
 
 </manifest>
